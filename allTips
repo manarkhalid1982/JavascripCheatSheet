@@ -1,0 +1,196 @@
+	• Current windows location window.location.href 
+	• Call element QuerySelector document.querySelector("button[value$='/B2C_1A_SignUpOrSignInLogingovPIN\/v2\.0\/']")
+	• Get reference url document.referrer.split('?')[0];
+	• Send me back home window.location.href = './';
+	• Update html text using id $('#page-header').html("Update payment method");
+	•  hide field and its label  $("#pbgc_lastfourdigitsofssn").closest("td").find("div.control, div.info").hide();
+	• Get url and trim ? window.location.href.split('?')[0];
+	• Get url post ? window.location.href.split('?')[1];
+	• Get URL guid window.location.href.split('?id=')[1];
+	• Hide an element     document.querySelector('[title="Register"]').style.visibility= "hidden";
+	• Remove an element    document.querySelector('[title="Register"]').style.display="none";
+	document.querySelector('[class="fa fa-sign-in"]').style.display="none"
+	document.querySelector('[class="nav nav-tabs nav-account"]').style.marginLeft="0em"
+	
+	• Query select button by title then click document.querySelector('[title="Log off"]').click(); 
+	• Change text by ID document.getElementById("external-login-heading").innerText = "Change this one"
+	• Change text by id  document.getElementById("external-login-heading").textContent = "Change this one  "
+	• Search and replace a text document.body.innerHTML = document.body.innerHTML.replace('JavaScript Strings', 'hi');
+	• Append text after field label  $('#pbgc_isaddress1validatedbyusps_label').after("<p>Make sure your address is complete and accurate.</p>");
+	• Make field as read only document.getElementById('pbgc_otherphoneext').readOnly = true;
+	• Call button 
+	   <button id="save-btn" onclick="save()">SAVE</button>
+	function save() {
+	   }
+	• Select CSS element  document.querySelector("body")
+	• Array (always start with 0 (0 indexed)) let cards = [firstCard, secondCard] // array - ordered list of items
+            document.getelementbyID("cardsEl").textContent = "Cards: " + cards[0] + " " + cards[1]
+	• Array length cards.length (it will return 2)
+	• Add to array let cards = [7, 4]    cards.push(6)   console.log(cards)
+	• Remove last element from array ArrayName.splice(-1) or ArrayName.pop()
+	• Add hint to input field   $('#pbgc_confirmmobilephone').attr('placeholder', 'Please retype your mobile phone number');
+	• Hide/show field with it element  $("#pbgc_confirmmobilephone").closest("td").find("div.control, div.info").show();
+	
+	• For loop 
+	
+	//    START           FINISH       STEP SIZE
+	for ( let count = 1;  count < 11;  count += 1 )  {
+	    
+	    console.log(count)
+	}
+	• For loop that run to the length or Array
+	for (let i = 0; i < messages.length; i += 1) {
+	    console.log(messages[i])
+	}
+	• i+=1 is exactly same as i++
+	• Create Random numbers 0-1
+	let randomNumber = Math.random()
+	• Floor
+	let flooredNumber = Math.floor(3.45632)  result is 3
+	• Return random numbers from 0-5 
+	let randomNumber = Math.floor( Math.random() * 6 )
+	
+	• Object (Complex data type) & to Create object  to call it player.name or player.chips
+	let player = {
+	    name: "Per",
+	    chips: 145
+	}
+	• Create function within object (method = fuctions attached to objects like console.log (object.method)
+	let player = {
+	    name: "Per",
+	    chips: 200,
+	    sayHello: function() {
+	        console.log("Heisann!")
+	    }
+	}
+	player.sayHello()
+	• Arrays (Push/pop add/remove object at the end while shift/unshift  will add/remove object at the beginning )
+	
+	let largeCountries = ["Tuvalu","India","USA","Indonesia","Monaco"]
+	largeCountries.pop(4)
+	largeCountries.push("Pakistan")
+	largeCountries.shift(0)
+	largeCountries.unshift("China")
+	Output 
+	["China", "India", "USA", "Indonesia", "Pakistan"]
+	
+	• On BTN click 
+	A        <button id="input-btn" onclick="saveLead()">SAVE INPUT</button>         
+	Function saveLead() {
+	    
+	})
+	B     <button id="input-btn">SAVE INPUT</button>
+	 let inputBtn = document.getElementById("input-btn")
+	inputBtn.addEventListener("click", function() {
+	   
+	})
+	• Cosnt Cannt be reassigned vs Let & var can // If possible, use const. If not, use let.
+	• Get input value document.getElementById('textboxId').value
+	• Add html element within js using innterHTML 
+	document.getElementById("ul-el").innerHTML += "<li>" + myLeads[i] + "</li>"
+	
+	document.getElementById("container").innerHTML+="<button>Buy !</button>"
+	• Appendchild () 
+	    // ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+	    // create element
+	    // set text content
+	    // append to ul
+	const li=document.createElement("li")
+	li.textContent+=myLeads[i] 
+	ulEl.appendChild(li)
+	• Template string (')
+	    // listItems += "<li><a target='_blank' href='" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
+	        listItems += `
+	            <li>
+	                <a target='_blank' href='${myLeads[i]}'>
+	                    ${myLeads[i]}
+	                </a>
+	            </li>
+	        `
+	Another example 
+	//const email = "Hey " + recipient + "! How is it going? Cheers Per"
+	const email =`Hey ${recipient} ! How is it going? Cheers Per`
+	
+	• Json is js that connect client with server
+	• Local Storage : Window.localStorage - Web APIs | MDN (mozilla.org)
+	• localStorage.clear() 
+	• Set items to local storage localStorage.setItem("myLeads","https:www.test.com")
+	 localStorage.getItem("myLeads") 
+	
+	// localStorage.setItem(key, value)
+	// localStorage.getItem(key)
+	// localStorage.clear()
+	• Typeof return type of var 
+	
+	console.log(typeof myLeads)
+	• JSOS.stringify(myLeads) turns var into string 
+	
+	myLeads=JSON.stringify(myLeads)
+	
+	• Turn string into an array
+	myLeads = JSON.parse(myLeads)
+	
+	  // Save the myLeads array to localStorage 
+	    // PS: remember JSON.stringify()
+	    localStorage.setItem("myLeads", JSON.stringify(myLeads) )
+
+	• Truthy & falsy 
+	JS falsy values are (first 3 are the common): 
+	// false 
+	// null -> how you as a developer signalize emptiness
+	// undefined -> how JavaScript signalizes emptiness
+	// 0
+	// ""
+	// NaN
+	
+	Samples 
+	
+	console.log(  Boolean("")   ) // false
+	console.log(  Boolean("0")  ) // true
+	console.log(  Boolean(100)  ) // true
+	console.log(  Boolean(null) ) // false
+	console.log(  Boolean([0])  ) // true
+	console.log(  Boolean(-0)   ) // false
+	
+	
+	• Double Click 
+	deleteBtn.addEventListener("dblclick", event => {
+	  console.log("Double-click detected")
+	  // Double-click detected
+	})
+	 or
+	deleteBtn.addEventListener("dblclick", function() {
+	    console.log("double clicked!")
+	})
+	
+	• Pass value to funtion
+	function greetUser(greeting, name) {
+	    welcomeEl.textContent = greeting + ", " + name + " 👋"    
+	}
+	greetUser("Howdy", "James")
+	• 
+	
+	
+	// Create a function, getFirst(arr), that returns the first item in the array
+	function getFirst(arr){
+	return arr[0]
+	}
+	
+	// Call it with an array as an argument to verify that it works
+	console.log("test")
+	console.log(getFirst(["one","two"]))
+	
+	• Grab item in array 
+	
+	const tabs = [
+	    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+	]
+	
+	    console.log(tabs[0].url)
+	
+	
+	
+	
+	
+	
+	
